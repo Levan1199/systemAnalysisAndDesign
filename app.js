@@ -11,6 +11,17 @@ var employeeRouter = require('./routes/employee');
 var retailerReportRouter = require('./routes/retailerReport')
 var retailerRouter = require('./routes/retailer');
 
+// Mongoose
+const mongoose = require('mongoose');
+
+// Connect to mongoDB
+const url = 'mongodb://localhost:27017/systemAnalysisAndDesign';
+const connect = mongoose.connect(url,{ useNewUrlParser: true });
+
+connect.then((db)=>{
+  console.log('Connected correctly to server');
+},(err)=>{ console.log(err); });
+
 var app = express();
 
 // view engine setup
