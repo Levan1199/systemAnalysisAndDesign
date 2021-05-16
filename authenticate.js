@@ -4,7 +4,6 @@ var User = require('./models/user');
 var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;
 var jwt = require('jsonwebtoken');
-var FacebookTokenStrategy = require('passport-facebook-token');
 
 var config = require('./config');
 const user = require('./models/user');
